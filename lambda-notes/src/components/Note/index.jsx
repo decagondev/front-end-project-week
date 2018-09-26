@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Form from '../Form';
 import Modal from 'react-modal';
+import Markdown from 'react-markdown';
 import { getNote, getNotes, editNote, deleteNote } from '../../actions';
 
 class Note extends React.Component {
@@ -105,10 +106,10 @@ class Note extends React.Component {
         </div>
 
         {/* trims note title if another student hasn't set a maxLength on their title input */}
-        <h2>{this.props.note.title.length > 30 ?
+        <h2><Markdown escapedHtml={true} source={this.props.note.title.length > 30 ?
              this.props.note.title.slice(0, 30) + '...' :
-             this.props.note.title}</h2>
-        <div className="note-body">{this.props.note.textBody}</div>
+             this.props.note.title} /></h2>
+        <div className="note-body"><Markdown escapedHtml={true} source={this.props.note.textBody} /></div>
       </div>
     )
   }
