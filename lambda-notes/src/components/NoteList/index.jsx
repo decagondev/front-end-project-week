@@ -7,6 +7,7 @@ import '@zendeskgarden/react-toggles/dist/styles.css';
 
 import {ThemeProvider} from '@zendeskgarden/react-theming';
 import { Toggle, Label } from '@zendeskgarden/react-toggles';
+import Markdown from 'react-markdown';
 
 class NoteList extends React.Component {
   state = {
@@ -40,7 +41,7 @@ class NoteList extends React.Component {
       if (this.state.isSortable) {
         return (
           <div className="note-preview-container" key={Math.random()}>
-            <h3>{note.title}</h3>
+            <h3><Markdown escapeHtml={true} source={note.title} /></h3>
             <p>{note.textBody}</p>
           </div>
         )
