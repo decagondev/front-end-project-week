@@ -1,11 +1,6 @@
 {
   "notes": [
     {
-      "id": 0,
-      "title": "Internal Memo",
-      "textBody": "This is an internal memo that will be used to write to you something random noises"
-    },
-    {
       "id": 1,
       "title": "External Letter",
       "textBody": "remember to pick up the groceries"
@@ -24,6 +19,31 @@
       "id": 4,
       "title": "Memo",
       "textBody": "this is an alarm. I am alarmed"
+    },
+    {
+      "title": "my new note",
+      "textBody": "sfg fgdtfe gtegh rtgf\n* some toast",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "Lambda",
+      "textBody": "Some List\n* list item 1\n* another List item\n"
+    },
+    {
+      "id": 7,
+      "title": "some syntax",
+      "textBody": "```javascript\nvar s = \"JavaScript\";\nalert(s);\n```"
+    },
+    {
+      "title": "Random Noises etc et",
+      "textBody": "This is a note that is here for filler text",
+      "id": 8
+    },
+    {
+      "title": "Api Note",
+      "textBody": "some backend stuff",
+      "id": 9
     }
   ]
 }

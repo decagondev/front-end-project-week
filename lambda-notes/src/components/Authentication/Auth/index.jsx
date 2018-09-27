@@ -1,5 +1,6 @@
 import React from "react";
 import SignIn from "../SignIn";
+import { connect } from "react-redux";
 
 const Auth = App =>
   class extends React.Component {

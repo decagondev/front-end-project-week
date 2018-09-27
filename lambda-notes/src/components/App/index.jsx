@@ -5,6 +5,7 @@ import Form from "../Form";
 import Note from "../Note";
 import NoteList from "../NoteList";
 import Sidebar from "../SideBar";
+import Auth from '../Authentication/Auth';
 import { getNotes, addNote } from "../../actions";
 import "./index.css";
 import "../components.css";
