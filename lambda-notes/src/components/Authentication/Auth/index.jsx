@@ -8,7 +8,17 @@ class extends React.Component {
     username: ""
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    if (localStorage.getItem('username') && localStorage.getItem('password')) {
+      this.setState({
+        authenticated: true, username: localStorage.getItem('username')
+      });
+    } else {
+      this.setState({
+        authenticated: false
+      });
+    }
+  }
 
   render() {}
 };
