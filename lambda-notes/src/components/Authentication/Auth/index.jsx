@@ -1,26 +1,36 @@
 import React from "react";
-import Login from '../SignIn';
+import SignIn from "../SignIn";
 
 const Auth = App =>
-class extends React.Component {
-  state = {
-    autenticated: false,
-    username: ""
-  }
+  class extends React.Component {
+    state = {
+      autenticated: false,
+      username: ""
+    };
 
-  componentDidMount() {
-    if (localStorage.getItem('username') && localStorage.getItem('password')) {
-      this.setState({
-        authenticated: true, username: localStorage.getItem('username')
-      });
-    } else {
-      this.setState({
-        authenticated: false
-      });
+    componentDidMount() {
+      if (
+        localStorage.getItem("username") &&
+        localStorage.getItem("password")
+      ) {
+        this.setState({
+          authenticated: true,
+          username: localStorage.getItem("username")
+        });
+      } else {
+        this.setState({
+          authenticated: false
+        });
+      }
     }
-  }
 
-  render() {}
-};
+    render() {
+      if (this.state.authenticated) {
+        return <App />;
+      } else {
+        return <SignIn />;
+      }
+    }
+  };
 
 export default Auth;
