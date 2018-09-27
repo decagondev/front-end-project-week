@@ -11,7 +11,9 @@ export default class SignIn extends Component {
     this.setState({ username: event.target.value });
   };
 
-  handlePassword = event => {};
+  handlePassword = event => {
+    this.setState({ password: event.target.value });
+  };
 
   login = () => {};
   
