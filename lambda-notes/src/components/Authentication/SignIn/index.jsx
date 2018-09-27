@@ -15,7 +15,11 @@ export default class SignIn extends Component {
     this.setState({ password: event.target.value });
   };
 
-  login = () => {};
+  login = () => {
+    localStorage.setItem("username", this.state.username);
+    localStorage.setItem("password", this.state.password);
+    window.location.reload();
+  };
   
   render() {
     return (
