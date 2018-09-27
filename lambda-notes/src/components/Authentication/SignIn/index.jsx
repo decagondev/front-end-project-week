@@ -24,7 +24,24 @@ export default class SignIn extends Component {
   render() {
     return (
       <div>
-        Signin skeleton
+         <div className="login-wrapper">
+          <form onSubmit={this.login}>
+            <div className="login-logo">LambdaNotes</div>
+            <input
+              type="text"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.handleUsername}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handlePassword}
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
     )
   }
