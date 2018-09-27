@@ -6,6 +6,8 @@ export default class SignIn extends Component {
     username: "",
     password: ""
   };
+
+  handleUsername = event => {};
   
   render() {
     return (
